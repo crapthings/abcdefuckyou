@@ -1,0 +1,29 @@
+<template name="latestCommentsList">
+
+	<h4 class="text-right">最新评论</h4>
+	<ul class="list-swagga">
+		{{#each latestCommentsList}}
+			{{> latestCommentItem}}
+		{{/each}}
+	</ul>
+
+</template>
+
+<template name="latestCommentItem">
+
+	<li class="item-swagga">
+		<div class="comment-item">
+			<div class="content">{{#markdown}}{{{content}}}{{/markdown}}</div>
+			<div class="foot text-small clearfix">
+				<ul class="pull-right">
+					<li>
+						<a href="javascript:;">
+							<time class="timeago" datetime="{{timeago createdAt}}"></time>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</li>
+
+</template>

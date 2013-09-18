@@ -1,0 +1,9 @@
+<template name="comments">
+
+	{{> commentForm}}
+	{{#with post}}
+		<div class="content">{{#markdown}}{{{content}}}{{/markdown}}</div>
+	{{/with}}
+	{{> latestCommentsList}}
+
+</template>

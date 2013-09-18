@@ -1,0 +1,23 @@
+<template name="header">
+
+	<header>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container mw">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+						<span class="sr-only">导航</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="{{pathFor 'home'}}" class="navbar-brand">ABCDEFUCKYOU</a>
+					{{#with system}}
+						<p class="navbar-text">{{stats.pageviews}}访问，{{stats.posts}}内容</p>
+					{{/with}}
+				</div>
+				{{> searchbar}}
+			</div>
+		</nav>
+	</header>
+
+</template>
